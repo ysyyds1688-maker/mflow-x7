@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- 隱私／footprint 隔離：禁索引、禁快取、禁外洩 referrer -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, notranslate" />
+  <meta name="googlebot" content="noindex, nofollow" />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="referrer no-referrer" />
+  <title>VIP 尊榮轉移計畫｜金級會員 LINE 回訪轉化路徑</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --card: #141b2f;
+      --card2: #10172a;
+      --gold: #d8b35a;
+      --gold2: #f4d98b;
+      --blue: #4da3ff;
+      --green: #55d69a;
+      --red: #ff6b6b;
+      --text: #f4f6fb;
+      --muted: #aab3c5;
+      --line: rgba(255,255,255,.12);
+      --white: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Noto Sans TC", "Microsoft JhengHei", Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(216,179,90,.22), transparent 30%),
+        radial-gradient(circle at top right, rgba(77,163,255,.16), transparent 28%),
+        linear-gradient(135deg, #070b16 0%, #0b1020 55%, #111827 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 36px 18px 80px;
+    }
+
+    .hero {
+      border: 1px solid rgba(216,179,90,.35);
+      background: linear-gradient(135deg, rgba(216,179,90,.16), rgba(20,27,47,.88));
+      border-radius: 28px;
+      padding: 34px;
+      box-shadow: 0 22px 80px rgba(0,0,0,.35);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero:after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      right: -120px;
+      top: -120px;
+      background: rgba(216,179,90,.18);
+      filter: blur(10px);
+    }
+
+    .tag {
+      display: inline-block;
+      color: #111827;
+      background: linear-gradient(135deg, var(--gold2), var(--gold));
+      padding: 6px 13px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .03em;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(28px, 5vw, 48px);
+      line-height: 1.18;
+      color: var(--white);
+    }
+
+    .subtitle {
+      max-width: 860px;
+      color: #dce4f6;
+      font-size: 18px;
+      margin: 0;
+    }
+
+    .hero-note {
+      margin-top: 20px;
+      padding: 16px 18px;
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 18px;
+      background: rgba(0,0,0,.2);
+      color: #f6ead0;
+      font-weight: 700;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+      margin-top: 22px;
+    }
+
+    .card {
+      grid-column: span 12;
+      background: rgba(20,27,47,.92);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 24px;
+      box-shadow: 0 18px 60px rgba(0,0,0,.25);
+    }
+
+    .half { grid-column: span 6; }
+    .third { grid-column: span 4; }
+
+    h2 {
+      margin: 0 0 16px;
+      color: var(--gold2);
+      font-size: 26px;
+      line-height: 1.25;
+    }
+
+    h3 {
+      margin: 0 0 10px;
+      font-size: 20px;
+      color: #ffffff;
+    }
+
+    p {
+      margin: 8px 0;
+      color: #dde5f7;
+    }
+
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .flow {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .step {
+      border: 1px solid rgba(216,179,90,.26);
+      background: rgba(255,255,255,.045);
+      border-radius: 18px;
+      padding: 16px;
+      min-height: 145px;
+      position: relative;
+    }
+
+    .num {
+      display: inline-flex;
+      width: 30px;
+      height: 30px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #111827;
+      font-weight: 900;
+      margin-bottom: 8px;
+    }
+
+    .step strong {
+      display: block;
+      color: white;
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .step span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .script {
+      background: #0a0f1f;
+      border: 1px solid rgba(244,217,139,.28);
+      border-radius: 16px;
+      padding: 16px;
+      white-space: pre-wrap;
+      color: #f6f0df;
+      font-size: 15px;
+      position: relative;
+      margin-top: 12px;
+    }
+
+    .script-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+
+    .script-title b {
+      color: var(--gold2);
+    }
+
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      background: rgba(216,179,90,.16);
+      color: var(--gold2);
+      border: 1px solid rgba(216,179,90,.42);
+      padding: 6px 12px;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .btn:hover {
+      background: rgba(216,179,90,.26);
+    }
+
+    .branch {
+      border-left: 4px solid var(--blue);
+      padding: 14px 16px;
+      background: rgba(255,255,255,.04);
+      border-radius: 14px;
+      margin: 12px 0;
+    }
+
+    .branch.vip { border-left-color: var(--gold); }
+    .branch.sports { border-left-color: var(--green); }
+    .branch.elec { border-left-color: #b083ff; }
+    .branch.warn { border-left-color: var(--red); }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 16px;
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+    th, td {
+      border: 1px solid rgba(255,255,255,.1);
+      padding: 12px 12px;
+      vertical-align: top;
+    }
+
+    th {
+      background: rgba(216,179,90,.15);
+      color: var(--gold2);
+      text-align: left;
+      white-space: nowrap;
+    }
+
+    td {
+      background: rgba(255,255,255,.035);
+      color: #e5ecfb;
+    }
+
+    .pill {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(77,163,255,.14);
+      color: #cfe7ff;
+      border: 1px solid rgba(77,163,255,.25);
+      font-size: 13px;
+      font-weight: 800;
+      margin: 3px 4px 3px 0;
+    }
+
+    .pill.gold {
+      background: rgba(216,179,90,.16);
+      color: var(--gold2);
+      border-color: rgba(216,179,90,.32);
+    }
+
+    .pill.green {
+      background: rgba(85,214,154,.14);
+      color: #c7ffe4;
+      border-color: rgba(85,214,154,.28);
+    }
+
+    .warning {
+      border: 1px solid rgba(255,107,107,.35);
+      background: rgba(255,107,107,.1);
+      color: #ffe0e0;
+      border-radius: 18px;
+      padding: 18px;
+      margin-top: 14px;
+    }
+
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .checklist li {
+      padding: 8px 0 8px 30px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      position: relative;
+      color: #e5ecfb;
+    }
+
+    .checklist li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .small {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .footer {
+      margin-top: 24px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    @media (max-width: 900px) {
+      .half, .third { grid-column: span 12; }
+      .flow { grid-template-columns: 1fr; }
+      .hero { padding: 24px; }
+      th, td { display: block; width: 100%; }
+      th { border-bottom: 0; }
+    }
+
+    @media print {
+      body {
+        background: #fff;
+        color: #111;
+      }
+      .card, .hero {
+        box-shadow: none;
+        break-inside: avoid;
+      }
+      .btn {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <span class="tag">個人 LINE 回訪 SOP</span>
+      <h1>VIP 尊榮轉移計畫<br>金級會員回訪轉化路徑</h1>
+      <p class="subtitle">
+        適用情境：過去從其他平台完成 VIP / 金級會員銜接的老客戶，現在用個人 LINE 私訊回訪，
+        主軸以「VIP 尊榮轉移銜接」喚醒，再分流至體育預測站、YS89.fun 論壇、電子 9888、世足 3C 或專員查詢。
+      </p>
+      <div class="hero-note">
+        核心一句話：你之前有做過 VIP / 金級會員銜接，不建議直接用一般會員方式重新開始，我先幫你確認目前能不能銜接回訪權益。
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2>一、最短轉化主線</h2>
+        <p>個人 LINE 不適合做太長漏斗。主線只保留「喚醒 → 分流 → 承接」三段，論壇專區只給猶豫客看，不要讓所有人都必經論壇。</p>
+        <div class="flow">
+          <div class="step">
+            <div class="num">1</div>
+            <strong>私訊喚醒</strong>
+            <span>用 VIP / 金級會員銜接查詢切入，不裝熟、不先丟連結。</span>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <strong>引導回覆</strong>
+            <span>CTA 只要一個：回我「轉移」。</span>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <strong>四選一分流</strong>
+            <span>VIP、體育、電子、先看說明。</span>
+          </div>
+          <div class="step">
+            <div class="num">4</div>
+            <strong>對應資源</strong>
+            <span>體育預測站、論壇專區、電子 9888、世足 3C。</span>
+          </div>
+          <div class="step">
+            <div class="num">5</div>
+            <strong>專員查詢</strong>
+            <span>最後都回到「查 VIP 尊榮轉移銜接」。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card half">
+        <h2>二、第一則私訊</h2>
+        <p class="muted">目的：只讓客戶回覆，不要一開始就丟論壇、活動、專員連結。</p>
+        <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('msg1')">複製</button></div>
+        <div class="script" id="msg1">嗨，打擾你一下
+
+最近這邊有整理一波 VIP 尊榮轉移回訪，主要是讓之前有做過 VIP / 金級會員銜接的會員，可以重新確認目前還能不能對應回訪權益。
+
+我這邊先簡單通知你，如果你近期剛好有想了解，我可以幫你先確認看看。
+
+目前可以查的方向大概有 VIP 權益銜接、世界盃活動、電子活動這幾類。
+
+你有需要的話回我「轉移」，我幫你看。
+如果暫時沒需要，也沒關係，我就不打擾你。</div>
+      </div>
+
+      <div class="card half">
+        <h2>三、客戶回覆後分流</h2>
+        <p class="muted">目的：不要馬上推活動，先確認他現在關心什麼。</p>
+        <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('msg2')">複製</button></div>
+        <div class="script" id="msg2">可以，我幫你看。
+
+我先確認一下你現在比較想了解哪一個方向：
+
+1️⃣ VIP 尊榮轉移銜接
+2️⃣ 世界盃 / 體育預測資訊
+3️⃣ 電子 9888 活動
+4️⃣ 我先看說明就好
+
+你回我數字就好，我比較好幫你對應。</div>
+      </div>
+
+      <div class="card">
+        <h2>四、四條主要承接路徑</h2>
+
+        <div class="branch vip">
+          <h3>客戶選 1：VIP 尊榮轉移銜接</h3>
+          <p><strong>目標：</strong>直接導專員查資格，不繞論壇。</p>
+          <div class="script-title"><b>回覆話術</b><button class="btn" onclick="copyText('path1')">複製</button></div>
+          <div class="script" id="path1">可以，這個最適合你。
+
+因為你之前有做過 VIP / 金級會員銜接，不建議直接用一般會員方式重新開始，會比較可惜。
+
+我可以幫你送專員確認一下，看你目前還能不能銜接原本的轉移權益，以及這波能不能搭配世界盃或電子活動。
+
+你要我直接幫你送查嗎？</div>
+        </div>
+
+        <div class="branch sports">
+          <h3>客戶選 2：世界盃 / 體育預測資訊</h3>
+          <p><strong>目標：</strong>先用體育預測站承接興趣，再拉回 VIP 轉移與世足 3C。</p>
+          <div class="script-title"><b>回覆話術</b><button class="btn" onclick="copyText('path2')">複製</button></div>
+          <div class="script" id="path2">可以，這波世界盃我們有整理體育預測站，裡面會放賽事觀察、熱門場次跟一些賽前資訊。
+
+你可以先看內容，不用急著決定。
+
+👉 體育預測站連結
+
+另外你之前有做過 VIP / 金級會員銜接，如果後面有想回來走體育線，我會建議一起查 VIP 尊榮轉移銜接，看看能不能搭配世足 3C 活動。
+
+你要我幫你查的話，回我「查世足」。</div>
+        </div>
+
+        <div class="branch elec">
+          <h3>客戶選 3：電子 9888 活動</h3>
+          <p><strong>目標：</strong>承接電子玩家，但不要只讓他看一般活動，要拉回 VIP 權益。</p>
+          <div class="script-title"><b>回覆話術</b><button class="btn" onclick="copyText('path3')">複製</button></div>
+          <div class="script" id="path3">電子這波有 9888 活動可以看。
+
+不過你之前有做過 VIP / 金級會員銜接，我會建議不要只看單一活動，先確認 VIP 尊榮轉移資格比較好。
+
+我可以幫你一起查兩個：
+
+電子 9888 能不能對應
+VIP 轉移權益能不能銜接
+
+這樣你比較不會只看到一般活動，漏掉轉移會員的權益。
+
+你要我幫你送查嗎？</div>
+        </div>
+
+        <div class="branch">
+          <h3>客戶選 4：我先看說明就好</h3>
+          <p><strong>目標：</strong>這時候才丟論壇 VIP 專區，讓猶豫客自己消化資訊。</p>
+          <div class="script-title"><b>回覆話術</b><button class="btn" onclick="copyText('path4')">複製</button></div>
+          <div class="script" id="path4">可以，你先看說明就好，不用急著決定。
+
+我把 VIP 尊榮轉移、世界盃活動、電子 9888 跟回訪流程整理在這個專區：
+
+👉 VIP 尊榮轉移計畫專區連結
+
+你看完如果想確認資格，回我「轉移」，我再幫你接專員查。</div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>五、客戶可能回覆與下一句</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>客戶回覆</th>
+              <th>判斷</th>
+              <th>你下一句</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>轉移 / VIP / 查詢 / 幫我看</td>
+              <td><span class="pill gold">高意圖</span></td>
+              <td>可以，我幫你看。我先確認你想了解 VIP 尊榮轉移、體育預測、電子 9888，還是先看說明？</td>
+            </tr>
+            <tr>
+              <td>有什麼活動？</td>
+              <td><span class="pill">問活動</span></td>
+              <td>這波主要不是一般新會員活動，會先看你之前的 VIP / 金級會員銜接紀錄能不能重新對應。你要先查 VIP，還是先看活動說明？</td>
+            </tr>
+            <tr>
+              <td>送多少？</td>
+              <td><span class="pill">問優惠</span></td>
+              <td>我不想直接亂報，因為你是轉移會員，要看帳號狀態和活動搭配。我建議先查 VIP 尊榮轉移，再看能對應哪一種。</td>
+            </tr>
+            <tr>
+              <td>電子 9888 是什麼？</td>
+              <td><span class="pill green">電子客</span></td>
+              <td>電子 9888 是電子活動方向，但你之前有做過 VIP / 金級會員銜接，我建議一起查 VIP 轉移，避免只看到一般活動。</td>
+            </tr>
+            <tr>
+              <td>世足 3C 是什麼？</td>
+              <td><span class="pill green">體育客</span></td>
+              <td>世足 3C 比較適合有看世界盃或體育賽事的會員。你要先看體育預測站，還是直接查世足 3C 能不能搭 VIP？</td>
+            </tr>
+            <tr>
+              <td>368 是什麼？</td>
+              <td><span class="pill">低門檻回流</span></td>
+              <td>368 比較像回訪體驗入口，但你之前是 VIP / 金級會員銜接，我會建議先查尊榮轉移，不適合再看 368。</td>
+            </tr>
+            <tr>
+              <td>你是誰？</td>
+              <td><span class="pill">防備</span></td>
+              <td>我是之前協助會員回訪這邊的窗口。這次主要是在整理 VIP 尊榮轉移會員名單，不需要的話我就不打擾。</td>
+            </tr>
+            <tr>
+              <td>你怎麼知道我資料？</td>
+              <td><span class="pill">防備</span></td>
+              <td>了解，我先說清楚。我是依照之前 VIP 轉移會員的回訪名單提醒，不會在這邊公開你的個人資料，也不會亂報條件。</td>
+            </tr>
+            <tr>
+              <td>真的假的？</td>
+              <td><span class="pill">半信半疑</span></td>
+              <td>真的，所以我才沒有直接丟一般活動給你。你之前是轉移會員，先查 VIP 銜接會比較準。</td>
+            </tr>
+            <tr>
+              <td>我先看看 / 有連結嗎？</td>
+              <td><span class="pill">猶豫</span></td>
+              <td>可以，我先給你 VIP 尊榮轉移說明專區。你先看，不急著決定。看完想查，回我「轉移」。</td>
+            </tr>
+            <tr>
+              <td>直接給我專員</td>
+              <td><span class="pill gold">高意圖</span></td>
+              <td>好，我幫你接。你等等直接跟專員說「我要查 VIP 尊榮轉移銜接」，我這邊備註你之前有做過金級會員銜接。</td>
+            </tr>
+            <tr>
+              <td>帳號忘了</td>
+              <td><span class="pill">流程問題</span></td>
+              <td>沒關係，這很常見。你不用自己找，我幫你接專員確認，跟他說「VIP 轉移會員，帳號忘記了」。</td>
+            </tr>
+            <tr>
+              <td>要儲值才有嗎？</td>
+              <td><span class="pill">條件疑問</span></td>
+              <td>我不會直接叫你先儲值。先確認目前能對應哪一種回訪資格，確認清楚再決定要不要參加。</td>
+            </tr>
+            <tr>
+              <td>流水多少？</td>
+              <td><span class="pill">條件疑問</span></td>
+              <td>每個活動規則不一樣，我不想在這邊亂講。你想先查 VIP、電子 9888，還是世足 3C？</td>
+            </tr>
+            <tr>
+              <td>我現在有在別家玩</td>
+              <td><span class="pill green">轉移機會</span></td>
+              <td>了解，那你更適合先看 VIP 尊榮轉移。你可以先查能不能銜接權益，適合再看，不適合就先放著。</td>
+            </tr>
+            <tr>
+              <td>能穩嗎？ / 預測準嗎？</td>
+              <td><span class="pill">風險敏感</span></td>
+              <td>這個我不會說穩，也不保證結果。體育預測站主要是賽事觀察和資訊參考，我這邊主要幫你查 VIP 轉移資格。</td>
+            </tr>
+            <tr>
+              <td>晚點</td>
+              <td><span class="pill">延後</span></td>
+              <td>可以，沒問題。我先幫你保留這個回訪提醒。你晚點想查，直接回我「轉移」就好。</td>
+            </tr>
+            <tr>
+              <td>不用了 / 沒興趣 / 沒玩了</td>
+              <td><span class="pill">拒絕</span></td>
+              <td>好，了解。那我這邊就不打擾你了。之後如果有需要查 VIP 轉移或活動，再回我就可以。</td>
+            </tr>
+            <tr>
+              <td>不要再傳</td>
+              <td><span class="pill" style="color:#ffd2d2;border-color:rgba(255,107,107,.4);background:rgba(255,107,107,.14);">停止</span></td>
+              <td>了解，我這邊就不再打擾你。謝謝你回覆。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card half">
+        <h2>六、追蹤節奏</h2>
+        <ul class="checklist">
+          <li>Day 0：只發第一則喚醒，不放連結。</li>
+          <li>客戶有回：立刻分流，不要拖。</li>
+          <li>已讀不回：隔天輕追一次。</li>
+          <li>第三天：最後提醒一次。</li>
+          <li>明確拒絕或說不要傳：停止，不再追。</li>
+        </ul>
+        <div class="script-title" style="margin-top:16px;"><b>隔天輕追</b><button class="btn" onclick="copyText('follow1')">複製</button></div>
+        <div class="script" id="follow1">昨天那個 VIP 尊榮轉移回訪，我先幫你留著。
+
+如果你最近沒打算回來也沒關係，我就不吵你。
+
+你如果想看目前能不能銜接權益，回我「轉移」就好。</div>
+
+        <div class="script-title" style="margin-top:16px;"><b>第三天最後提醒</b><button class="btn" onclick="copyText('follow2')">複製</button></div>
+        <div class="script" id="follow2">這邊最後提醒你一下，VIP 尊榮轉移回訪我先幫你留到這波名單內。
+
+如果你想確認資格，回我「VIP」。
+
+如果暫時沒需要，我這邊就不打擾你。</div>
+      </div>
+
+      <div class="card half">
+        <h2>七、論壇專區的正確位置</h2>
+        <p>論壇專區不要放第一步，也不要讓所有人都必經。它只處理三種人：</p>
+        <p><span class="pill">我先看看</span><span class="pill">有連結嗎</span><span class="pill">真的假的</span></p>
+        <table>
+          <tbody>
+            <tr>
+              <th>專區名稱</th>
+              <td>VIP 尊榮轉移計畫｜金級會員回訪專區</td>
+            </tr>
+            <tr>
+              <th>副標</th>
+              <td>VIP 銜接資格確認・金級會員回訪權益・活動對應入口</td>
+            </tr>
+            <tr>
+              <th>頁面目的</th>
+              <td>建立信任、說明活動、最後導回 LINE 查詢。</td>
+            </tr>
+            <tr>
+              <th>最後 CTA</th>
+              <td>想確認資格，請回 LINE 傳「轉移」。</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="warning">
+          <strong>注意：</strong>論壇不是成交點，論壇是信任點。真正成交應回到 LINE 專員查詢。
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>八、禁用與建議用字</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>不要寫</th>
+              <th>建議改成</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>金牌會員 / 金牌等級</td>
+              <td>金級會員 / 金級資格</td>
+            </tr>
+            <tr>
+              <td>保證獲利、穩贏、必中</td>
+              <td>賽事觀察、資訊參考、活動條件確認</td>
+            </tr>
+            <tr>
+              <td>你從某某娛樂城轉來</td>
+              <td>你之前有做過 VIP / 金級會員銜接</td>
+            </tr>
+            <tr>
+              <td>回來直接領優惠</td>
+              <td>先確認目前可對應權益</td>
+            </tr>
+            <tr>
+              <td>名額最後一天、錯過沒有</td>
+              <td>我先幫你保留這波回訪提醒</td>
+            </tr>
+            <tr>
+              <td>穩定出金、包過流水</td>
+              <td>專員協助確認活動規則與流程</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>九、操作備忘</h2>
+        <p>
+          <span class="pill gold">主線</span>
+          VIP 尊榮轉移銜接
+          <span class="pill green">體育線</span>
+          體育預測站 + 世足 3C
+          <span class="pill">電子線</span>
+          電子 9888 + VIP 銜接
+          <span class="pill">猶豫線</span>
+          YS89.fun 論壇專區
+        </p>
+        <ul class="checklist">
+          <li>第一則不放連結，先讓客戶回覆。</li>
+          <li>高意圖客不要繞論壇，直接導專員。</li>
+          <li>問活動的客戶，不要只講 368，要拉回 VIP 轉移。</li>
+          <li>客戶問穩不穩，不能保證，只能說資訊參考。</li>
+          <li>客戶說不要傳，就停止，不再追蹤。</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="footer">
+      VIP 尊榮轉移計畫 LINE 回訪 SOP｜請將頁面內的「連結」替換為實際體育預測站、論壇專區、專員 LINE 入口。
+    </div>
+  </div>
+
+  <script>
+    function copyText(id) {
+      const text = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        alert("已複製話術");
+      }).catch(() => {
+        const area = document.createElement("textarea");
+        area.value = text;
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand("copy");
+        area.remove();
+        alert("已複製話術");
+      });
+    }
+  </script>
+</body>
+</html>
