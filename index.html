@@ -381,12 +381,25 @@
       font-size: 14px;
     }
 
+    /* 表格一律包左右滑動 wrapper（禁垂直堆疊） */
+    .t-scroll {
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 16px;
+      margin-top: 12px;
+    }
+    .t-scroll table {
+      margin-top: 0;
+    }
+
     @media (max-width: 900px) {
       .half, .third { grid-column: span 12; }
       .flow { grid-template-columns: 1fr; }
       .hero { padding: 24px; }
-      th, td { display: block; width: 100%; }
-      th { border-bottom: 0; }
+      /* 表格不堆疊，改為整個表左右滑動 */
+      .t-scroll table { min-width: 560px; }
+      th, td { white-space: normal; }
     }
 
     @media print {
@@ -408,7 +421,7 @@
   <div class="wrap">
     <section class="hero">
       <span class="tag">個人 LINE 回訪 SOP</span>
-      <h1>VIP 尊榮轉移計畫<br>小東會員回訪轉化路徑</h1>
+      <h1>VIP 尊榮轉移計畫<br>小東 VIP 回訪轉化路徑</h1>
       <p class="subtitle">
         適用情境：過去從其他平台完成 VIP / 金級會員銜接的老客戶，現在用個人 LINE 私訊回訪，
         主軸以「VIP 尊榮轉移銜接」喚醒，再分流至體育預測站、YS89.fun 論壇、電子 9888、世足 3C 或專員查詢。
@@ -449,6 +462,84 @@
             <span>最後都回到「查 VIP 尊榮轉移銜接」。</span>
           </div>
         </div>
+      </div>
+
+
+      <div class="card">
+        <h2>老闆版｜正確最終轉化路徑</h2>
+        <p>這份流程的核心不是讓小東成交，而是讓小東完成前端接線。小東只負責通知、判斷方向、把有興趣的人導到正確入口。</p>
+
+        <table>
+          <tbody>
+            <tr>
+              <th>小東角色</th>
+              <td><strong>小東｜VIP回訪協助</strong></td>
+            </tr>
+            <tr>
+              <th>小東任務</th>
+              <td><strong>通知 → 問方向 → 接線</strong></td>
+            </tr>
+            <tr>
+              <th>任務邊界</th>
+              <td>不報死活動條件、不承諾權益、不處理註冊細節、不硬推。實際權益、活動條件、註冊流程都以夜色官方客服確認為準。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top:22px;">最後目的地</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>客戶狀態</th>
+              <th>小東要導去哪裡</th>
+              <th>小東說法</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>想查 VIP 權益</td>
+              <td>夜色官方客服</td>
+              <td>這個要由夜色官方客服查比較準，你直接跟客服說「我要查 VIP 尊榮轉移 / 金級權益銜接」。</td>
+            </tr>
+            <tr>
+              <td>想看世界盃 / 體育</td>
+              <td>體育預測站 → 夜色官方客服</td>
+              <td>你可以先看體育預測站；如果要確認世足活動或 VIP 權益能不能搭配，再找夜色官方客服。</td>
+            </tr>
+            <tr>
+              <td>想看電子 9888</td>
+              <td>夜色官方客服</td>
+              <td>電子 9888 條件以官方客服確認為準，你可以直接跟客服說「我要查電子 9888 + VIP 回訪」。</td>
+            </tr>
+            <tr>
+              <td>想直接註冊</td>
+              <td>夜色官方註冊入口</td>
+              <td>這邊是夜色官方註冊入口；註冊後若要查 VIP 回訪，再加官方客服確認。</td>
+            </tr>
+            <tr>
+              <td>猶豫想先看</td>
+              <td>VIP 說明頁 / YS89.fun 論壇</td>
+              <td>你可以先看說明，不用急著決定。看完要查資格，再找夜色官方客服。</td>
+            </tr>
+            <tr>
+              <td>問很多細節</td>
+              <td>夜色官方客服</td>
+              <td>我這邊不亂報細節，避免你看錯條件；實際規則請官方客服確認。</td>
+            </tr>
+            <tr>
+              <td>不需要</td>
+              <td>停止，不追</td>
+              <td>了解，那我這邊就不打擾你了，謝謝你回覆。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="warning">
+          最重要：小東不是成交專員，是前端接線員。所有路徑最後都要收斂到「夜色官方客服」或「夜色官方註冊入口」。
+        </div>
+
+        <div class="script-title" style="margin-top:16px;"><b>接線前固定句｜可直接複製</b><button class="btn" onclick="copyText('handoffcore')">複製</button></div>
+        <div class="script" id="handoffcore">我這邊只是協助通知跟接線，實際權益、活動條件、註冊流程還是以夜色官方客服確認為準。</div>
       </div>
 
       <div class="card">
@@ -493,7 +584,7 @@
           <tbody>
             <tr>
               <th>對外身份</th>
-              <td>小東｜會員回訪協助窗口</td>
+              <td>小東｜VIP 回訪協助窗口</td>
             </tr>
             <tr>
               <th>角色定位</th>
@@ -501,15 +592,15 @@
             </tr>
             <tr>
               <th>LINE 暱稱建議</th>
-              <td>小東｜會員回訪<br>東山｜會員回訪（如果想保留原本「東山」記憶點）</td>
+              <td>小東｜VIP回訪協助<br>小東｜會員回訪協助<br>東山｜VIP回訪協助（如果想保留原本「東山」記憶點）</td>
             </tr>
             <tr>
               <th>頭貼方向</th>
-              <td>深藍黑底＋金色細框＋文字「會員回訪」＋小字「小東」。不要用鴨頭、鈔票、籌碼、美女、超跑。</td>
+              <td>深藍黑底＋金色細框＋文字「VIP 回訪」＋小字「小東」。不要用鴨頭、鈔票、籌碼、美女、超跑，也不要把「YS娛樂城」直接放大在頭貼上。</td>
             </tr>
             <tr>
               <th>狀態消息</th>
-              <td>會員回訪通知｜有需要再協助確認</td>
+              <td>VIP 回訪通知｜有需要再協助確認</td>
             </tr>
             <tr>
               <th>核心台詞</th>
@@ -517,6 +608,10 @@
             </tr>
           </tbody>
         </table>
+
+        <div class="warning">
+          重要：這批客戶過去不一定是 YS 會員，所以第一則不要寫「YS 會員回訪」。YS 只在對方問「哪邊承接？」或「YS 是什麼？」時再透明說明。
+        </div>
 
         <div class="script-title" style="margin-top:16px;"><b>客戶問「你是誰？」｜可直接複製</b><button class="btn" onclick="copyText('whoisdong')">複製</button></div>
         <div class="script" id="whoisdong">我是小東，這邊主要協助會員回訪通知。
@@ -534,6 +629,28 @@
 
 你可以先不用提供任何資料，也不用急著決定。
 如果只是想看說明，我也可以先傳說明頁給你看。</div>
+
+        <div class="script-title" style="margin-top:16px;"><b>客戶問「YS 是什麼？」｜可直接複製</b><button class="btn" onclick="copyText('whatisys')">複製</button></div>
+        <div class="script" id="whatisys">YS 是這波協助承接 VIP / 金級會員權益銜接查詢的平台。
+
+不是說你原本就是 YS 會員，主要是這波有整理之前有做過會員權益轉移、等級銜接或相關回訪需求的名單，確認目前是否還有可對應的回訪權益。
+
+如果你只是想了解，我可以先幫你看方向；如果沒有需要，我這邊就不打擾。</div>
+
+        <div class="script-title" style="margin-top:16px;"><b>客戶問「是娛樂城嗎？」｜可直接複製</b><button class="btn" onclick="copyText('isplatform')">複製</button></div>
+        <div class="script" id="isplatform">對，YS 是娛樂遊戲平台這邊的承接窗口。
+
+不過我這邊不是要直接叫你操作，也不是要你馬上參加活動，主要只是協助通知 VIP / 金級會員權益銜接查詢。
+
+如果你有想了解，我可以先幫你看目前可查的方向；如果你沒需要，我這邊就不打擾你。</div>
+
+        <div class="script-title" style="margin-top:16px;"><b>客戶說「我又沒用過 YS」｜可直接複製</b><button class="btn" onclick="copyText('neverusedys')">複製</button></div>
+        <div class="script" id="neverusedys">了解，這邊不是說你原本有使用過 YS，也不是要強制認定你是 YS 會員。
+
+主要是這波由 YS 這邊承接 VIP / 金級會員權益銜接類型的回訪查詢，可能包含之前有做過轉移、銜接或相關諮詢的人。
+
+如果你沒有需要了解，我這邊就先不打擾，也避免造成誤會。</div>
+
       </div>
 
       <div class="card half">
@@ -594,8 +711,9 @@
 2️⃣ 世界盃 / 體育活動
 3️⃣ 電子 9888 活動
 4️⃣ 我先看說明就好
+5️⃣ 我想直接註冊 / 找官方客服
 
-你回我數字就好，我幫你對應。</div>
+你回我數字就好，我幫你接對入口。</div>
 
             <div class="script-title" style="margin-top:16px;"><b>C 類冷客未回追蹤｜可直接複製</b><button class="btn" onclick="copyText('followcold')">複製</button></div>
             <div class="script" id="followcold">嗨，補提醒你一下
@@ -621,8 +739,9 @@
 2️⃣ 世界盃 / 體育預測資訊
 3️⃣ 電子 9888 活動
 4️⃣ 我先看說明就好
+5️⃣ 我想直接註冊 / 找官方客服
 
-你回我數字就好，我比較好幫你對應。</div>
+你回我數字就好，我幫你接對入口。</div>
       </div>
 
       <div class="card">
@@ -688,6 +807,93 @@ VIP 轉移權益能不能銜接
         </div>
       </div>
 
+
+      <div class="card">
+        <h2>四之一、各分支最後導流話術</h2>
+        <p>以下是小東完成分流後，真正要把人導到的入口。把【連結】替換成實際夜色官方客服、註冊入口、體育預測站與論壇專區。</p>
+
+        <div class="branch vip">
+          <h3>1｜查 VIP / 金級權益 → 夜色官方客服</h3>
+          <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('toofficialvip')">複製</button></div>
+          <div class="script" id="toofficialvip">可以，這個要由夜色官方客服查比較準。
+
+我這邊只是協助回訪通知，不會直接跟你亂報條件。
+
+你直接找官方客服說：
+「我要查 VIP 尊榮轉移 / 金級權益銜接」
+
+客服會幫你確認目前能不能對應回訪權益。
+
+👉 夜色官方客服 LINE：
+【放官方客服連結】</div>
+        </div>
+
+        <div class="branch sports">
+          <h3>2｜世界盃 / 體育 → 體育預測站 + 夜色官方客服</h3>
+          <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('toofficialsports')">複製</button></div>
+          <div class="script" id="toofficialsports">可以，世界盃這邊可以先看體育預測站，裡面會整理賽事觀察、熱門場次跟活動方向。
+
+👉 體育預測站：
+【放體育預測站連結】
+
+如果你看完想確認世足活動或 VIP 權益能不能搭配，直接找夜色官方客服說：
+
+「我要查世足活動 + VIP 回訪」
+
+👉 夜色官方客服 LINE：
+【放官方客服連結】</div>
+        </div>
+
+        <div class="branch elec">
+          <h3>3｜電子 9888 → 夜色官方客服</h3>
+          <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('toofficialelec')">複製</button></div>
+          <div class="script" id="toofficialelec">電子 9888 這個活動條件要以官方客服確認為準，我這邊不亂報，避免你看錯規則。
+
+你可以直接找夜色官方客服說：
+
+「我要查電子 9888 + VIP 回訪」
+
+客服會幫你確認目前能不能對應。
+
+👉 夜色官方客服 LINE：
+【放官方客服連結】</div>
+        </div>
+
+        <div class="branch">
+          <h3>4｜先看說明 → VIP 說明頁 / YS89.fun 論壇 + 夜色官方客服</h3>
+          <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('toforum')">複製</button></div>
+          <div class="script" id="toforum">可以，你可以先看說明，不用急著決定。
+
+這邊有整理 VIP 尊榮轉移、金級權益銜接、世界盃活動跟電子活動方向：
+
+👉 VIP 回訪說明專區：
+【放 YS89.fun 論壇專區連結】
+
+你看完要查資格的話，直接找夜色官方客服說：
+
+「我要查 VIP 回訪」
+
+👉 夜色官方客服 LINE：
+【放官方客服連結】</div>
+        </div>
+
+        <div class="branch vip">
+          <h3>5｜直接註冊 → 夜色官方註冊入口 + 夜色官方客服</h3>
+          <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('toregister')">複製</button></div>
+          <div class="script" id="toregister">可以，這邊是夜色官方註冊入口：
+
+👉 夜色官方註冊入口：
+【放註冊連結】
+
+註冊完如果要查 VIP 回訪、金級權益銜接、世足或電子活動，建議你直接加官方客服說：
+
+「我是小東這邊通知的，要查 VIP 回訪」
+
+👉 夜色官方客服 LINE：
+【放官方客服連結】</div>
+        </div>
+      </div>
+
       <div class="card">
         <h2>五、客戶可能回覆與下一句</h2>
         <table>
@@ -733,6 +939,21 @@ VIP 轉移權益能不能銜接
               <td>你是誰？</td>
               <td><span class="pill">防備</span></td>
               <td>我是小東，這邊主要協助會員回訪通知。我不是直接處理活動細節的專員，主要是先幫忙通知，有需要再幫你接專員確認。</td>
+            </tr>
+            <tr>
+              <td>YS 是什麼？</td>
+              <td><span class="pill">品牌疑問</span></td>
+              <td>YS 是這波協助承接 VIP / 金級會員權益銜接查詢的平台，不是說你原本就是 YS 會員；有需要我再幫你看方向。</td>
+            </tr>
+            <tr>
+              <td>是娛樂城嗎？</td>
+              <td><span class="pill">品牌疑問</span></td>
+              <td>對，是娛樂遊戲平台這邊的承接窗口。但我這邊不是要你馬上操作，主要只是協助通知與初步分流。</td>
+            </tr>
+            <tr>
+              <td>我又沒用過 YS</td>
+              <td><span class="pill">防備 / 誤會</span></td>
+              <td>了解，這邊不是說你原本有使用過 YS，也不是強制認定你是 YS 會員。如果沒有需要了解，我這邊就先不打擾。</td>
             </tr>
             <tr>
               <td>你怎麼知道我資料？</td>
@@ -874,6 +1095,14 @@ VIP 轉移權益能不能銜接
               <td>你之前有做過 VIP / 金級會員銜接</td>
             </tr>
             <tr>
+              <td>YS 會員回訪 / YS 老會員回訪</td>
+              <td>VIP 回訪通知 / VIP 權益銜接查詢</td>
+            </tr>
+            <tr>
+              <td>你之前是 YS 會員</td>
+              <td>不是說你原本就是 YS 會員，這波是由 YS 承接查詢</td>
+            </tr>
+            <tr>
               <td>回來直接領優惠</td>
               <td>先確認目前可對應權益</td>
             </tr>
@@ -889,6 +1118,76 @@ VIP 轉移權益能不能銜接
         </table>
       </div>
 
+
+      <div class="card">
+        <h2>十、iPhone 捷徑半自動發送 SOP</h2>
+        <p>重點：iPhone 捷徑比較適合做「半自動接線」，例如複製話術、開啟 LINE 分享畫面、提醒你逐一發送。不要設計成大量無確認自動群發，容易被系統判定為騷擾，也容易造成封鎖。</p>
+
+        <table>
+          <thead>
+            <tr>
+              <th>方式</th>
+              <th>適合用途</th>
+              <th>限制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>捷徑複製話術</td>
+              <td>最快、最安全。點一下把冷客版話術複製到剪貼簿，再手動貼到 LINE。</td>
+              <td>需要人工選聊天室與送出。</td>
+            </tr>
+            <tr>
+              <td>LINE 分享網址</td>
+              <td>用捷徑組合 line.me 分享文字，打開 LINE 的分享畫面。</td>
+              <td>仍需手動選好友 / 群組並送出，不能穩定無感自動送給指定好友。</td>
+            </tr>
+            <tr>
+              <td>iOS 個人自動化</td>
+              <td>可設定時間提醒你開始回訪，或每天打開指定捷徑。</td>
+              <td>不建議用來無確認大量發 LINE 私訊。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top:22px;">推薦做法 A：一鍵複製冷客版話術</h3>
+        <ol style="color:#e5ecfb;">
+          <li>打開 iPhone「捷徑」App。</li>
+          <li>點「＋」新增捷徑，命名：冷客回訪話術。</li>
+          <li>新增動作「文字」，貼上 C 類冷客第一則。</li>
+          <li>新增動作「拷貝到剪貼簿」。</li>
+          <li>把捷徑加入主畫面。</li>
+          <li>執行時：點捷徑 → 打開 LINE → 選客戶 → 貼上 → 人工送出。</li>
+        </ol>
+
+        <div class="script-title" style="margin-top:16px;"><b>捷徑用冷客版文字｜可直接複製</b><button class="btn" onclick="copyText('shortcutcoldmsg')">複製</button></div>
+        <div class="script" id="shortcutcoldmsg">嗨，打擾你一下
+
+我是小東，這邊協助 VIP 回訪通知。
+
+近期有開放一波會員回訪查詢，主要是協助之前有做過 VIP / 金級會員銜接的會員，確認目前是否還有可對應的回訪權益。
+
+我這邊只是先簡單通知你，如果你近期剛好有想了解，我可以幫你先看方向。
+
+目前可以查的方向大概有 VIP 權益銜接、世界盃活動、電子活動這幾類。
+
+有需要的話回我「了解」就好。
+如果暫時沒需要，也沒關係，我這邊就不打擾你。</div>
+
+        <h3 style="margin-top:22px;">推薦做法 B：捷徑打開 LINE 分享畫面</h3>
+        <ol style="color:#e5ecfb;">
+          <li>新增捷徑，動作 1 用「文字」放話術。</li>
+          <li>新增動作「URL 編碼」。</li>
+          <li>新增動作「URL」，格式放：<br><span class="small">https://line.me/R/share?text=【URL編碼後文字】</span></li>
+          <li>新增動作「打開 URL」。</li>
+          <li>執行後會打開 LINE 分享畫面，你再手動選人與送出。</li>
+        </ol>
+
+        <div class="warning">
+          執行原則：每個客戶都要人工確認後再送出；已拒絕、不要傳、沒興趣的人必須標記停止，不要再用捷徑送訊息。
+        </div>
+      </div>
+
       <div class="card">
         <h2>九、操作備忘</h2>
         <p>
@@ -902,22 +1201,33 @@ VIP 轉移權益能不能銜接
           YS89.fun 論壇專區
         </p>
         <ul class="checklist">
-          <li>先把 LINE 暱稱改成「小東｜會員回訪」，頭貼改成低調會員回訪風格。</li>
+          <li>先把 LINE 暱稱改成「小東｜VIP回訪協助」，頭貼改成低調 VIP 回訪風格。</li>
+          <li>第一則不要說「YS 會員回訪」；YS 只在對方問是哪邊承接時再說明。</li>
           <li>第一則不放連結，先讓客戶回覆。</li>
           <li>高意圖客不要繞論壇，直接導專員。</li>
           <li>問活動的客戶，不要只講 368，要拉回 VIP 轉移。</li>
           <li>客戶問穩不穩，不能保證，只能說資訊參考。</li>
           <li>客戶說不要傳，就停止，不再追蹤。</li>
+          <li>所有路徑最後導到夜色官方客服、夜色官方註冊入口，或先看論壇 / 體育預測站再回客服。</li>
         </ul>
       </div>
     </section>
 
     <div class="footer">
-      VIP 尊榮轉移計畫 LINE 回訪 SOP｜帳號建議使用「小東｜會員回訪」，並將頁面內的「連結」替換為實際體育預測站、論壇專區、專員 LINE 入口。
+      VIP 尊榮轉移計畫 LINE 回訪 SOP｜帳號建議使用「小東｜VIP回訪協助」，並將頁面內的「連結」替換為實際體育預測站、論壇專區、專員 LINE 入口。
     </div>
   </div>
 
   <script>
+
+    // 所有表格自動包入左右滑動 wrapper（手機禁垂直堆疊）
+    document.querySelectorAll("table").forEach(function (t) {
+      if (t.parentElement && t.parentElement.classList.contains("t-scroll")) return;
+      var w = document.createElement("div");
+      w.className = "t-scroll";
+      t.parentNode.insertBefore(w, t);
+      w.appendChild(t);
+    });
 
     function openTab(evt, tabId) {
       const tabs = evt.currentTarget.closest(".tabs");
