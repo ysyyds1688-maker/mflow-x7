@@ -381,6 +381,21 @@
       font-size: 14px;
     }
 
+    /* 「你下一句」下拉展開 + 複製 */
+    .reveal-btn { white-space: nowrap; }
+    .reveal-box { display: none; margin-top: 10px; }
+    .reveal-box.open { display: block; }
+    .reveal-text {
+      white-space: pre-wrap;
+      color: #f6f0df;
+      background: #0a0f1f;
+      border: 1px solid rgba(244,217,139,.28);
+      border-radius: 12px;
+      padding: 12px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
     /* 表格一律包左右滑動 wrapper（禁垂直堆疊） */
     .t-scroll {
       width: 100%;
@@ -896,7 +911,8 @@ VIP 轉移權益能不能銜接
 
       <div class="card">
         <h2>五、客戶可能回覆與下一句</h2>
-        <table>
+        <p class="muted">點「展開」看建議話術，展開後可一鍵複製。</p>
+        <table id="reply-table">
           <thead>
             <tr>
               <th>客戶回覆</th>
@@ -1237,8 +1253,7 @@ VIP 轉移權益能不能銜接
       tabs.querySelector("#" + tabId).classList.add("active");
     }
 
-    function copyText(id) {
-      const text = document.getElementById(id).innerText;
+    function doCopy(text) {
       navigator.clipboard.writeText(text).then(() => {
         alert("已複製話術");
       }).catch(() => {
@@ -1251,6 +1266,51 @@ VIP 轉移權益能不能銜接
         alert("已複製話術");
       });
     }
+
+    function copyText(id) {
+      doCopy(document.getElementById(id).innerText);
+    }
+
+    // 「五、客戶可能回覆與下一句」第三欄改為下拉展開 + 複製
+    (function () {
+      const table = document.getElementById("reply-table");
+      if (!table) return;
+      table.querySelectorAll("tbody tr").forEach(function (tr) {
+        const cell = tr.cells[tr.cells.length - 1];
+        if (!cell) return;
+        const text = cell.innerText.trim();
+        cell.innerHTML = "";
+
+        const toggle = document.createElement("button");
+        toggle.type = "button";
+        toggle.className = "btn reveal-btn";
+        toggle.textContent = "展開 ▾";
+
+        const box = document.createElement("div");
+        box.className = "reveal-box";
+
+        const body = document.createElement("div");
+        body.className = "reveal-text";
+        body.textContent = text;
+
+        const copy = document.createElement("button");
+        copy.type = "button";
+        copy.className = "btn";
+        copy.textContent = "複製這句";
+        copy.style.marginTop = "10px";
+        copy.addEventListener("click", function () { doCopy(text); });
+
+        toggle.addEventListener("click", function () {
+          const open = box.classList.toggle("open");
+          toggle.textContent = open ? "收合 ▴" : "展開 ▾";
+        });
+
+        box.appendChild(body);
+        box.appendChild(copy);
+        cell.appendChild(toggle);
+        cell.appendChild(box);
+      });
+    })();
   </script>
 </body>
 </html>
