@@ -557,6 +557,140 @@
         <div class="script" id="handoffcore">我這邊只是協助通知跟接線，實際權益、活動條件、註冊流程還是以夜色官方客服確認為準。</div>
       </div>
 
+
+      <div class="card">
+        <h2>新增補充｜LINE OA 極簡接線版</h2>
+        <p>
+          這一版是針對目前實際狀況修正：客服團隊在 LiveChat，且小東無法控制客服端話術，所以不要把路徑拉長。
+          小東只負責把有興趣的人帶到 LINE OA；客人進 OA 後只輸入一個關鍵字「小東」，OA 直接回真人客服入口。
+        </p>
+
+        <div class="warning">
+          最重要原則：客人進 LINE OA 後，不要再分流一次，不要再叫他選 VIP / 世足 / 電子。OA 只負責確認他來對入口，然後給真人客服連結。
+        </div>
+
+        <h3 style="margin-top:22px;">最終極簡路徑</h3>
+        <div class="flow">
+          <div class="step">
+            <div class="num">1</div>
+            <strong>小東私訊</strong>
+            <span>低壓通知，讓客戶回覆「了解」。</span>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <strong>確認有興趣</strong>
+            <span>不用聊太深，只確認他願意了解。</span>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <strong>導 LINE OA</strong>
+            <span>請客戶加入夜色 LINE OA。</span>
+          </div>
+          <div class="step">
+            <div class="num">4</div>
+            <strong>輸入「小東」</strong>
+            <span>OA 自動辨識小東導流。</span>
+          </div>
+          <div class="step">
+            <div class="num">5</div>
+            <strong>真人客服</strong>
+            <span>OA 直接給 LiveChat 真人客服入口。</span>
+          </div>
+        </div>
+
+        <h3 style="margin-top:22px;">小東導 LINE OA 話術</h3>
+        <p class="muted">用在客戶回覆「了解」或表示想看後。這句的目標是把人導到官方 LINE OA，不再解釋細節。</p>
+        <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('simpleoa_handoff')">複製</button></div>
+        <div class="script" id="simpleoa_handoff">可以，這個後面要由官方客服確認比較準。
+
+我這邊只是協助通知，不會直接跟你亂報條件。
+
+你先加夜色官方 LINE，進去後輸入：
+
+「小東」
+
+系統會直接給你真人客服入口。
+
+👉 夜色官方 LINE：
+【放 LINE OA 連結】</div>
+
+        <h3 style="margin-top:22px;">LINE OA 關鍵字設定</h3>
+        <table>
+          <tbody>
+            <tr>
+              <th>關鍵字</th>
+              <td><strong>小東</strong></td>
+            </tr>
+            <tr>
+              <th>目的</th>
+              <td>辨識這位客人是小東個人 LINE 導流進來，不再讓客人重複選一次。</td>
+            </tr>
+            <tr>
+              <th>動作</th>
+              <td>自動回覆真人客服連結。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 style="margin-top:22px;">輸入「小東」後的 LINE OA 自動訊息</h3>
+        <p class="muted">這段放在 LINE OA 自動回覆內。目的只有一個：讓客戶點真人客服。</p>
+        <div class="script-title"><b>推薦版｜可直接複製</b><button class="btn" onclick="copyText('oa_keyword_xiaodong')">複製</button></div>
+        <div class="script" id="oa_keyword_xiaodong">收到，這邊是「小東 VIP 回訪」入口。
+
+如果你是小東這邊通知的會員，可以直接點下方真人客服，由客服協助確認目前可對應的回訪權益、活動或註冊流程。
+
+👉 真人客服：
+【放 LiveChat 連結】
+
+如果暫時只是想先看看，也可以先不用操作。</div>
+
+        <div class="script-title" style="margin-top:16px;"><b>更短版｜可直接複製</b><button class="btn" onclick="copyText('oa_keyword_xiaodong_short')">複製</button></div>
+        <div class="script" id="oa_keyword_xiaodong_short">收到，這邊是小東回訪入口。
+
+請點下方真人客服，客服會協助你確認目前可對應的回訪權益與活動。
+
+👉 真人客服：
+【放 LiveChat 連結】</div>
+
+        <h3 style="margin-top:22px;">這版刻意不做的事情</h3>
+        <ul class="checklist">
+          <li>不在 LINE OA 裡再問一次 VIP / 世足 / 電子。</li>
+          <li>不設定小東VIP、小東世足、小東電子等多組暗號。</li>
+          <li>不要求客服端一定照小東 SOP 接話，因為客服端不可控。</li>
+          <li>不做 LiveChat routing，不把流程變長。</li>
+          <li>不讓小東承擔成交，只完成通知與接線。</li>
+        </ul>
+
+        <h3 style="margin-top:22px;">小東可控範圍</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>小東能控制</th>
+              <th>小東不控制</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>第一則私訊、是否追蹤、是否停止打擾。</td>
+              <td>LiveChat 客服怎麼成交。</td>
+            </tr>
+            <tr>
+              <td>引導客戶加入 LINE OA 並輸入「小東」。</td>
+              <td>客服端回覆速度與活動細節說明。</td>
+            </tr>
+            <tr>
+              <td>把有興趣的人送到真人客服入口。</td>
+              <td>最終註冊、儲值、活動審核結果。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="warning">
+          小東的任務完成點：客戶成功進 LINE OA、輸入「小東」、並看到真人客服入口。後續由官方客服與 LiveChat 團隊承接。
+        </div>
+      </div>
+
+
       <div class="card">
         <h2>一之一、C 類冷客優先策略</h2>
         <p>如果目前名單多數是 C 類冷客，第一波目標不是成交，而是先降低防備、避免封鎖、讓對方願意回一句。</p>
