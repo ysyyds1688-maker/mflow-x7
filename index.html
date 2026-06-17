@@ -334,6 +334,53 @@
       font-size: 13px;
     }
 
+
+    .tabs {
+      margin-top: 14px;
+    }
+
+    .tab-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .tab-btn {
+      border: 1px solid rgba(216,179,90,.36);
+      background: rgba(255,255,255,.045);
+      color: #dce4f6;
+      border-radius: 999px;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-weight: 800;
+      font-size: 14px;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, var(--gold2), var(--gold));
+      color: #111827;
+      border-color: transparent;
+    }
+
+    .tab-panel {
+      display: none;
+    }
+
+    .tab-panel.active {
+      display: block;
+    }
+
+    .mini-note {
+      border: 1px solid rgba(85,214,154,.28);
+      background: rgba(85,214,154,.08);
+      color: #dfffee;
+      border-radius: 14px;
+      padding: 12px 14px;
+      margin: 10px 0 12px;
+      font-size: 14px;
+    }
+
     @media (max-width: 900px) {
       .half, .third { grid-column: span 12; }
       .flow { grid-template-columns: 1fr; }
@@ -361,13 +408,13 @@
   <div class="wrap">
     <section class="hero">
       <span class="tag">個人 LINE 回訪 SOP</span>
-      <h1>VIP 尊榮轉移計畫<br>金級會員回訪轉化路徑</h1>
+      <h1>VIP 尊榮轉移計畫<br>小東會員回訪轉化路徑</h1>
       <p class="subtitle">
         適用情境：過去從其他平台完成 VIP / 金級會員銜接的老客戶，現在用個人 LINE 私訊回訪，
         主軸以「VIP 尊榮轉移銜接」喚醒，再分流至體育預測站、YS89.fun 論壇、電子 9888、世足 3C 或專員查詢。
       </p>
       <div class="hero-note">
-        核心一句話：你之前有做過 VIP / 金級會員銜接，不建議直接用一般會員方式重新開始，我先幫你確認目前能不能銜接回訪權益。
+        核心一句話：我是小東，這邊協助會員回訪通知；我先幫你看方向，實際權益與活動條件再接專員確認。
       </div>
     </section>
 
@@ -379,12 +426,12 @@
           <div class="step">
             <div class="num">1</div>
             <strong>私訊喚醒</strong>
-            <span>用 VIP / 金級會員銜接查詢切入，不裝熟、不先丟連結。</span>
+            <span>C 類冷客用「會員回訪查詢」切入，不裝熟、不先丟連結。</span>
           </div>
           <div class="step">
             <div class="num">2</div>
             <strong>引導回覆</strong>
-            <span>CTA 只要一個：回我「轉移」。</span>
+            <span>CTA 依名單冷熱調整：半熟客回「轉移」，冷客回「了解」。</span>
           </div>
           <div class="step">
             <div class="num">3</div>
@@ -404,11 +451,109 @@
         </div>
       </div>
 
+      <div class="card">
+        <h2>一之一、C 類冷客優先策略</h2>
+        <p>如果目前名單多數是 C 類冷客，第一波目標不是成交，而是先降低防備、避免封鎖、讓對方願意回一句。</p>
+        <table>
+          <thead>
+            <tr>
+              <th>不要一開始做</th>
+              <th>應該改成</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>直接說「回我轉移」</td>
+              <td>先說「回我了解」，降低壓力。</td>
+            </tr>
+            <tr>
+              <td>直接丟 9888 / 3C / 368</td>
+              <td>先講會員回訪查詢，再依回覆分流。</td>
+            </tr>
+            <tr>
+              <td>講得像很熟</td>
+              <td>用「嗨，打擾你一下」開場。</td>
+            </tr>
+            <tr>
+              <td>隔天立刻追</td>
+              <td>冷客建議隔 2 天再補提醒一次。</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="warning">
+          C 類冷客的第一 KPI 不是成交，而是回覆率、負面回覆率與封鎖率。先取得回覆權，再談 VIP 尊榮轉移。
+        </div>
+      </div>
+
+
+      <div class="card">
+        <h2>一之二、小東人設與 LINE 包裝</h2>
+        <p>這個帳號不要包裝成官方客服，也不要繼續用「東山鴨頭」。最適合的定位是：低壓、真人感、負責通知與初步分流的會員回訪協助窗口。</p>
+        <table>
+          <tbody>
+            <tr>
+              <th>對外身份</th>
+              <td>小東｜會員回訪協助窗口</td>
+            </tr>
+            <tr>
+              <th>角色定位</th>
+              <td>不是官方客服、不是強推業務；主要協助會員回訪通知，有需要再接專員確認。</td>
+            </tr>
+            <tr>
+              <th>LINE 暱稱建議</th>
+              <td>小東｜會員回訪<br>東山｜會員回訪（如果想保留原本「東山」記憶點）</td>
+            </tr>
+            <tr>
+              <th>頭貼方向</th>
+              <td>深藍黑底＋金色細框＋文字「會員回訪」＋小字「小東」。不要用鴨頭、鈔票、籌碼、美女、超跑。</td>
+            </tr>
+            <tr>
+              <th>狀態消息</th>
+              <td>會員回訪通知｜有需要再協助確認</td>
+            </tr>
+            <tr>
+              <th>核心台詞</th>
+              <td>我這邊只是先協助通知，有需要再幫你接專員確認。</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="script-title" style="margin-top:16px;"><b>客戶問「你是誰？」｜可直接複製</b><button class="btn" onclick="copyText('whoisdong')">複製</button></div>
+        <div class="script" id="whoisdong">我是小東，這邊主要協助會員回訪通知。
+
+我不是直接處理活動細節的專員，主要是先幫忙整理回訪名單、通知有需要的會員。
+
+如果你想了解，我可以先幫你看方向；如果要確認實際權益或活動條件，我再幫你接專員確認。
+
+如果你暫時沒需要，我這邊就不打擾你。</div>
+
+        <div class="script-title" style="margin-top:16px;"><b>客戶問「真的假的？」｜可直接複製</b><button class="btn" onclick="copyText('realornot')">複製</button></div>
+        <div class="script" id="realornot">真的，所以我才沒有直接跟你報活動或叫你操作。
+
+我這邊只是先通知回訪查詢，有需要的會員再幫忙接專員確認。
+
+你可以先不用提供任何資料，也不用急著決定。
+如果只是想看說明，我也可以先傳說明頁給你看。</div>
+      </div>
+
       <div class="card half">
         <h2>二、第一則私訊</h2>
-        <p class="muted">目的：只讓客戶回覆，不要一開始就丟論壇、活動、專員連結。</p>
-        <div class="script-title"><b>可直接複製</b><button class="btn" onclick="copyText('msg1')">複製</button></div>
-        <div class="script" id="msg1">嗨，打擾你一下
+        <p class="muted">目的：只讓客戶回覆，不要一開始就丟論壇、活動、專員連結。現在新增 C 類冷客專用版本，適合大多數不熟或很久沒互動的名單。</p>
+
+        <div class="tabs">
+          <div class="tab-nav">
+            <button class="tab-btn active" onclick="openTab(event, 'tab-warm')">半熟客版</button>
+            <button class="tab-btn" onclick="openTab(event, 'tab-cold')">C 類冷客版</button>
+          </div>
+
+          <div class="tab-panel active" id="tab-warm">
+            <div class="mini-note">
+              適合：曾有互動、對方大概知道你是誰，但一段時間沒聯絡的會員。CTA 使用「轉移」。
+            </div>
+            <div class="script-title"><b>半熟客版｜可直接複製</b><button class="btn" onclick="copyText('msg1')">複製</button></div>
+            <div class="script" id="msg1">嗨，打擾你一下
+
+我是小東，這邊協助會員回訪通知。
 
 最近這邊有整理一波 VIP 尊榮轉移回訪，主要是讓之前有做過 VIP / 金級會員銜接的會員，可以重新確認目前還能不能對應回訪權益。
 
@@ -418,6 +563,50 @@
 
 你有需要的話回我「轉移」，我幫你看。
 如果暫時沒需要，也沒關係，我就不打擾你。</div>
+          </div>
+
+          <div class="tab-panel" id="tab-cold">
+            <div class="mini-note">
+              適合：C 類冷客、很久沒互動、可能忘記你是誰的名單。CTA 改用「了解」，比「轉移」低壓。
+            </div>
+            <div class="script-title"><b>C 類冷客版｜可直接複製</b><button class="btn" onclick="copyText('msg1cold')">複製</button></div>
+            <div class="script" id="msg1cold">嗨，打擾你一下
+
+我是小東，這邊協助會員回訪通知。
+
+近期有開放一波會員回訪查詢，主要是協助之前有做過 VIP / 金級會員銜接的會員，確認目前是否還有可對應的回訪權益。
+
+我這邊只是先簡單通知你，如果你近期剛好有想了解，我可以幫你先看方向。
+
+目前可以查的方向大概有 VIP 權益銜接、世界盃活動、電子活動這幾類。
+
+有需要的話回我「了解」就好。
+如果暫時沒需要，也沒關係，我這邊就不打擾你。</div>
+
+            <div class="script-title" style="margin-top:16px;"><b>客戶回「了解」後｜可直接複製</b><button class="btn" onclick="copyText('msg2cold')">複製</button></div>
+            <div class="script" id="msg2cold">可以，我簡單跟你說明一下。
+
+這波主要不是一般新會員活動，而是針對之前有做過 VIP / 金級會員銜接的會員，協助確認目前還能不能對應回訪權益。
+
+你可以先看你比較想了解哪個方向：
+
+1️⃣ VIP 權益銜接
+2️⃣ 世界盃 / 體育活動
+3️⃣ 電子 9888 活動
+4️⃣ 我先看說明就好
+
+你回我數字就好，我幫你對應。</div>
+
+            <div class="script-title" style="margin-top:16px;"><b>C 類冷客未回追蹤｜可直接複製</b><button class="btn" onclick="copyText('followcold')">複製</button></div>
+            <div class="script" id="followcold">嗨，補提醒你一下
+
+前面提到的是會員回訪查詢，不是一定要參加活動。
+
+如果你只是想了解目前還能不能對應 VIP / 金級會員回訪權益，可以回我「了解」，我再幫你看方向。
+
+如果暫時沒需要，我這邊就不再打擾你。</div>
+          </div>
+        </div>
       </div>
 
       <div class="card half">
@@ -543,7 +732,7 @@ VIP 轉移權益能不能銜接
             <tr>
               <td>你是誰？</td>
               <td><span class="pill">防備</span></td>
-              <td>我是之前協助會員回訪這邊的窗口。這次主要是在整理 VIP 尊榮轉移會員名單，不需要的話我就不打擾。</td>
+              <td>我是小東，這邊主要協助會員回訪通知。我不是直接處理活動細節的專員，主要是先幫忙通知，有需要再幫你接專員確認。</td>
             </tr>
             <tr>
               <td>你怎麼知道我資料？</td>
@@ -553,7 +742,7 @@ VIP 轉移權益能不能銜接
             <tr>
               <td>真的假的？</td>
               <td><span class="pill">半信半疑</span></td>
-              <td>真的，所以我才沒有直接丟一般活動給你。你之前是轉移會員，先查 VIP 銜接會比較準。</td>
+              <td>真的，所以我才沒有直接跟你報活動或叫你操作。我這邊只是先通知回訪查詢，有需要再幫你接專員確認。</td>
             </tr>
             <tr>
               <td>我先看看 / 有連結嗎？</td>
@@ -612,7 +801,7 @@ VIP 轉移權益能不能銜接
       <div class="card half">
         <h2>六、追蹤節奏</h2>
         <ul class="checklist">
-          <li>Day 0：只發第一則喚醒，不放連結。</li>
+          <li>Day 0：C 類冷客優先發「冷客版」第一則，不放連結。</li>
           <li>客戶有回：立刻分流，不要拖。</li>
           <li>已讀不回：隔天輕追一次。</li>
           <li>第三天：最後提醒一次。</li>
@@ -713,6 +902,7 @@ VIP 轉移權益能不能銜接
           YS89.fun 論壇專區
         </p>
         <ul class="checklist">
+          <li>先把 LINE 暱稱改成「小東｜會員回訪」，頭貼改成低調會員回訪風格。</li>
           <li>第一則不放連結，先讓客戶回覆。</li>
           <li>高意圖客不要繞論壇，直接導專員。</li>
           <li>問活動的客戶，不要只講 368，要拉回 VIP 轉移。</li>
@@ -723,11 +913,20 @@ VIP 轉移權益能不能銜接
     </section>
 
     <div class="footer">
-      VIP 尊榮轉移計畫 LINE 回訪 SOP｜請將頁面內的「連結」替換為實際體育預測站、論壇專區、專員 LINE 入口。
+      VIP 尊榮轉移計畫 LINE 回訪 SOP｜帳號建議使用「小東｜會員回訪」，並將頁面內的「連結」替換為實際體育預測站、論壇專區、專員 LINE 入口。
     </div>
   </div>
 
   <script>
+
+    function openTab(evt, tabId) {
+      const tabs = evt.currentTarget.closest(".tabs");
+      tabs.querySelectorAll(".tab-btn").forEach(btn => btn.classList.remove("active"));
+      tabs.querySelectorAll(".tab-panel").forEach(panel => panel.classList.remove("active"));
+      evt.currentTarget.classList.add("active");
+      tabs.querySelector("#" + tabId).classList.add("active");
+    }
+
     function copyText(id) {
       const text = document.getElementById(id).innerText;
       navigator.clipboard.writeText(text).then(() => {
